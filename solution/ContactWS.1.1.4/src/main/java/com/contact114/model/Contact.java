@@ -24,4 +24,9 @@ public class Contact {
     @Column(name = "contactType")
     @Enumerated(EnumType.ORDINAL)
     private ContactTypeEnum contactType;
+
+    @NotNull
+    @Column(name = "contactSurname")
+    @Size(max = 20)
+    private String contactSurname;
 }

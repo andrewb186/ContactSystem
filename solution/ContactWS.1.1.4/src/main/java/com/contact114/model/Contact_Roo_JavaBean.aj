@@ -24,4 +24,12 @@ privileged aspect Contact_Roo_JavaBean {
         this.contactType = contactType;
     }
     
+    public String Contact.getContactSurname() {
+        return this.contactSurname;
+    }
+    
+    public void Contact.setContactSurname(String contactSurname) {
+        this.contactSurname = contactSurname;
+    }
+    
 }

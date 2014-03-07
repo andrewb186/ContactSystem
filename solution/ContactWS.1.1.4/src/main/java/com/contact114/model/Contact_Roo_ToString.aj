@@ -10,6 +10,7 @@ privileged aspect Contact_Roo_ToString {
     public String Contact.toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("ContactName: ").append(getContactName()).append(", ");
+        sb.append("ContactSurname: ").append(getContactSurname()).append(", ");
         sb.append("ContactType: ").append(getContactType()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("Version: ").append(getVersion());
