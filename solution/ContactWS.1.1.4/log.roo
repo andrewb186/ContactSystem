@@ -13,3 +13,4 @@ enum constant --name Coworker
 enum constant --name Family
 focus --class ~.model.Contact
 field enum --fieldName contactType --column contactType --type ~.model.ContactTypeEnum --enumType ORDINAL --notNull true
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-07 14:57:00
