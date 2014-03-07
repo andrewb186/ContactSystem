@@ -17,3 +17,8 @@ field enum --fieldName contactType --column contactType --type ~.model.ContactTy
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-07 15:19:03
 focus --class ~.model.Contact
 field string --fieldName contactSurname --column contactSurname --notNull true --sizeMax 20
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-07 18:16:07
+web mvc setup 
+web mvc all --package ~.controller
+exit
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-07 18:17:06
