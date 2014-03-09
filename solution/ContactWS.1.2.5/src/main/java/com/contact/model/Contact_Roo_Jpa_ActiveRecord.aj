@@ -14,7 +14,7 @@ privileged aspect Contact_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Contact.entityManager;
     
-    public static final List<String> Contact.fieldNames4OrderClauseFilter = java.util.Arrays.asList("");
+    public static final List<String> Contact.fieldNames4OrderClauseFilter = java.util.Arrays.asList("contactName", "contactSurname", "contactGender", "contactType");
     
     public static final EntityManager Contact.entityManager() {
         EntityManager em = new Contact().entityManager;

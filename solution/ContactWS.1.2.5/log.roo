@@ -11,3 +11,11 @@ enum constant --name Colleague
 enum type --class ~.model.enums.Gender --path SRC_MAIN_JAVA
 enum constant --name Male
 enum constant --name Female
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-03-09 14:51:13
+focus --class ~.model.Contact
+field string --fieldName contactName --column contactName --notNull true --sizeMax 20
+field string --fieldName contactSurname --column contactSurname --notNull true --sizeMax 20
+field enum --fieldName contactGender --type ~.model.enums.Gender --enumType STRING --column contactGender
+field enum --fieldName contactType --type ~.model.enums.ContactType --enumType STRING --column contactType
+exit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-03-09 14:58:51
