@@ -1,3 +1,13 @@
-// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-03-05 21:20:36
+
 project --topLevelPackage com.contact --projectName ContactWS.1.2.5 --java 6 --packaging WAR
-// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-03-05 21:20:56
+
+persistence setup --provider HIBERNATE --database MYSQL --hostName localhost --databaseName dbContacts --userName root --password andrew
+entity jpa --class ~.model.Contact --entityName Contact --identifierColumn id --identifierField id --identifierType java.lang.Integer
+
+enum type --class ~.model.enums.ContactType --path SRC_MAIN_JAVA 
+enum constant --name Friend
+enum constant --name Family
+enum constant --name Colleague
+enum type --class ~.model.enums.Gender --path SRC_MAIN_JAVA
+enum constant --name Male
+enum constant --name Female
