@@ -3,3 +3,17 @@ project --topLevelPackage com.simplecontactws114 --projectName SimpleContactWS.1
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 09:28:29
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-11 09:28:32
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 09:31:25
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-11 09:38:01
+persistence setup --provider HIBERNATE ---database MYSQL --databaseName simpleContactDB --hostName localhost --userName root --password mosta
+entity --class ~.model.Contact --entityName Contact --identifierColumn id --identifierField id --identifierType java.lang.Integer
+// [failed] enum type --class ~.model.enum.ContactType
+enum type --class ~.model.enums.ContactType
+enum constant --name Friend --class ~.model.enums.ContactType
+enum constant --name Family --class ~.model.enums.ContactType
+enum constant --name Colleague --class ~.model.enums.ContactType
+focus --class ~.model.Contact
+field string --fieldName contactName --column contactName --notNull true --sizeMax 20
+field string --fieldName contactSurname --column contactSurname --notNull true --sizeMax 20
+field enum --fieldName contactType --type ~.model.enums.ContactType --enumType STRING 
+exit
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 10:08:37
