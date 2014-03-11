@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_simplecontactws114_model_Contact" object="${contact}" path="/contacts" z="WzIIx/MG9T1ZXxSHrLu1DdD+Xj4=">
+        <field:display field="contactName" id="s_com_simplecontactws114_model_Contact_contactName" object="${contact}" z="sz6rFcDTYcRlniKe7E7eqwCNeyo="/>
+        <field:display field="contactSurname" id="s_com_simplecontactws114_model_Contact_contactSurname" object="${contact}" z="4q5m2hHilzhmkobAtZGXR3cT3Dg="/>
+        <field:display field="contactType" id="s_com_simplecontactws114_model_Contact_contactType" object="${contact}" z="ML2eUf7aSAU6umidimiqumuDaNo="/>
+    </page:show>
+</div>

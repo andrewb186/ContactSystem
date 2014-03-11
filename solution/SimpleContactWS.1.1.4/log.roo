@@ -17,3 +17,7 @@ field string --fieldName contactSurname --column contactSurname --notNull true -
 field enum --fieldName contactType --type ~.model.enums.ContactType --enumType STRING 
 exit
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 10:08:37
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-11 10:22:29
+web mvc setup
+controller all --package ~.controller
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 11:05:31
