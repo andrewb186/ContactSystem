@@ -3,3 +3,14 @@ project --topLevelPackage com.customcontrollers --projectName CustomControllersC
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 15:33:15
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-11 15:33:17
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 15:35:34
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-11 15:42:45
+persistence setup --database MYSQL --provider HIBERNATE --databaseName customControllerContactDB --hostName localhost --userName root --password mosta
+entity --class ~.model.Contact --entityName Contact --identifierColumn id --identifierField id --identifierType java.lang.Integer
+field string --fieldName contactName --column contactName --notNull true --sizeMax 20
+field string --fieldName contactSurname --column contactSurname --notNull true --sizeMax 20
+enum type --class ~.model.enums.ContactType
+enum constant --name Friend
+enum constant --name Family
+enum constant --name Colleague
+exit
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 16:07:34
