@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<title>Spring Roo Controller Test with JQuery</title>
+	</head>
+	
+		<body>
+			<table>
+				<tr>
+					<td>Post type</td>
+					<td><select id="postMethod">
+						<option value="POST">POST</option>
+						<option value="GET">GET</option>
+					   </select>
+				        </td>
+				</tr>
+
+				<tr>
+					<td>URL</td>
+					<td><input type="text" id="txtURL"/> </td>
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td><textarea rows="10" cols="50" id="txtData"></textarea> </td>
+				</tr>
+
+				<tr>
+					<td>&nbsp;</td>
+					<td><input type="button" value="submit" id="btnSubmit"/></td>
+				</tr>
+			</table>
+		
+
+
+		<!-- J Q U E R Y   S C R I P T --->
+		<script>
+		   $(document).ready(function(){
+		   	$("#btnSubmit").click(function(){
+				submit();
+
+			});//Click function
+ 		   });	
+		
+		  function submit(){
+				$.ajax({
+					url: "http://localhost:8080/CustomControllersContactWS.1.1.4/mycontact/getUser/1",
+					type: "GET",
+					//crossDomain: true,
+					contentType: "text/plain",//Data type sent to the server
+					dataType: "json",//Type expected from server
+					data: "1",
+					success: function(msg){/*var data = JSON.parse(msg);*/ alert(msg.contactName + " " + msg.contactSurname);},
+					error:function(msg, status, er){alert(msg + " " + status + " " + er);}
+					});
+			  }//end of submit function
+		</script>
+	</body>
+</html>

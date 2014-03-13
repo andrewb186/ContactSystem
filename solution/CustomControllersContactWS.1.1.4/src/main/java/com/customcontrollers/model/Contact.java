@@ -6,10 +6,12 @@ import org.springframework.roo.addon.tostring.RooToString;
 import javax.validation.constraints.NotNull;
 import javax.persistence.Column;
 import javax.validation.constraints.Size;
+import org.springframework.roo.addon.json.RooJson;
 
 @RooJavaBean
 @RooToString
 @RooEntity(identifierField = "id", identifierColumn = "id", identifierType = Integer.class, entityName = "Contact")
+@RooJson
 public class Contact {
 
     @NotNull
