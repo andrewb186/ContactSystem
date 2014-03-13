@@ -14,3 +14,5 @@ enum constant --name Family
 enum constant --name Colleague
 exit
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-11 16:07:34
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-13 16:41:45
+persistence setup --database MYSQL --provider HIBERNATE --databaseName customControllerContactDB --hostName localhost --userName root --password mosta
