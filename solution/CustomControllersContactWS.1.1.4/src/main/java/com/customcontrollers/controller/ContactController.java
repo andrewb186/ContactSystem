@@ -1,15 +1,13 @@
 package com.customcontrollers.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.customcontrollers.model.Contact;
+
 
 @RequestMapping("/mycontact")
 @Controller
@@ -17,7 +15,7 @@ public class ContactController {
 	
 	@RequestMapping(value = "/getUser/{userID}", method = RequestMethod.GET)
 	@ResponseBody
-	Contact getUser(@PathVariable String userID) {
+	Contact getUser(@PathVariable("userID") String userID) {
 		Contact contact = new Contact();
 		try {
 			int id = Integer.parseInt(userID);
@@ -27,10 +25,26 @@ public class ContactController {
 			System.out.println(ex.getMessage());
 		}
 		return contact;
-		// return contact.toJson();
+	}//End of method Get User
+	
+	
+	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
+	@ResponseBody
+	String addUser(@RequestBody Contact contact){
+		Contact tmp = contact;
+		tmp.persist();
+		tmp.flush();
+		return tmp.getId().toString();
+	}
+
+	
+	@RequestMapping(value = "/updateUser/{userID}", method = RequestMethod.PUT)
+	@ResponseBody
+	String updateUser(@PathVariable("userID") String id, @RequestBody Contact contact){
+		System.out.println(id);
+		return "Updated"; 
 	}
 	
 	
-
 
 }

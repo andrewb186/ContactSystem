@@ -21,3 +21,4 @@ web mvc setup
 // Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2014-03-13 16:55:43
 controller class --class ~.controller.ContactController --preferredMapping /mycontact
 json add --class ~.model.Contact
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2014-03-13 17:32:20
