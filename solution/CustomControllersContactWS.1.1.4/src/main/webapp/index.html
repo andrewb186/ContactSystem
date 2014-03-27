@@ -12,6 +12,7 @@
 			<td><select id="postMethod">
 					<option value="POST">POST</option>
 					<option value="GET">GET</option>
+					<option value="PUT">PUT</option>
 			</select></td>
 		</tr>
 
@@ -37,15 +38,35 @@
 		   $(document).ready(function(){
 		   	$("#btnSubmit").click(function(){
 				//submit();
-				submit2();
+				//submit2();
+		   		submit3();
 			});//Click function
  		   });	
 		
-		   function submit2(){
-			   var tmpData = {id:3, contactName:"Update", contactSurname:"Update"};
+		   
+		   
+		   
+		   function submit3(){
+			   var tmpData = {id:1, contactName:"Update_Test7", contactSurname:"Update_Test7", version:4};
 				$.ajax({
-					url: "http://localhost:8080/CustomControllersContactWS.1.1.4/mycontact/updateUser/3",
+					url: "http://localhost:8080/CustomControllersContactWS.1.1.4/mycontact/updateUser",
 					type: "PUT",
+					contentType: "application/json",//Data type sent to the server
+					dataType: "json",//Type expected from server
+					data: JSON.stringify(tmpData),
+					success: function(msg){alert(msg)},
+					error:function(msg, status, er){alert(msg + " " + status + " " + er);}
+					});
+			  }//end of submit function
+		   
+		   
+		   
+		   
+		   function submit2(){
+			   var tmpData = {contactName:"Posting", contactSurname:"Posting"};
+				$.ajax({
+					url: "http://localhost:8080/CustomControllersContactWS.1.1.4/mycontact/addUser",
+					type: "POST",
 					contentType: "application/json",//Data type sent to the server
 					dataType: "json",//Type expected from server
 					data: JSON.stringify(tmpData),

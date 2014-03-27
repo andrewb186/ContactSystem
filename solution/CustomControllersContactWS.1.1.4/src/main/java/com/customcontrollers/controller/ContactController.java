@@ -38,13 +38,27 @@ public class ContactController {
 	}
 
 	
-	@RequestMapping(value = "/updateUser/{userID}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/updateUser", method = RequestMethod.PUT)
 	@ResponseBody
-	String updateUser(@PathVariable("userID") String id, @RequestBody Contact contact){
-		System.out.println(id);
-		return "Updated"; 
+	String updateUser(@RequestBody Contact contact) {
+		Contact c = (Contact) contact;
+		try {
+			//Contact c = (Contact) contact;
+			c.merge();
+			c.flush();
+			System.out.println(c.getId());
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+		return c.getId().toString();
 	}
 	
+	
+//	@RequestMapping(value="/deleteUser", method=RequestMethod.POST)
+//	@ResponseBody
+//	String deleteUser(@RequestBody Contact contact){
+//		return "Delete OK";
+//	}
 	
 
 }
